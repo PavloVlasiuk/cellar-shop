@@ -6,9 +6,16 @@
   "scripts": {
     "build:server": "pnpm --filter server build",
     "start:dev:server": "pnpm --filter server start:dev",
-    "start:server": "pnpm --filter server start:prod"
+    "start:server": "pnpm --filter server start:prod",
+    "prepare": "husky",
+    "pre-commit": "pnpm run --filter \"@apps/*\" pre-commit"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "husky": "^9.1.6"
+  }
 }
